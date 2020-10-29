@@ -12,15 +12,11 @@
     <link href="social-buttons.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/csslider.css">
     <link rel="stylesheet" href="css/tooltip.css">
-    <link rel="stylesheet" href="css/remodal-default-theme.css">
-    <link rel="stylesheet" href="css/remodal.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="js/preloader.js"></script>
-    <script src="js/remodal.js"></script>
-    <script src="js/remodal.min.js"></script>
 </head>
 <body>
     <div class="preloader" id="preloader">
@@ -126,54 +122,24 @@
 		<input placeholder="email@email.com" required="" type="email">
 		<input placeholder="Выберите пароль" required="" type="password">
 		<input placeholder="Повторите пароль" required="" type="password">					
-        <div>
-            <a href="#modal2" class="btn btn-primary">зарегистрироваться</a>
+		<button class='open-modal' data-modal="#modal1" type="submit">зарегистрироваться</button>	
+        <div class='modal' id='modal1'>
+            <div class='content'>
+                <h2 class='title'>Это лендинг!</h2>
+                <p>
+                    Регистрироваться здесь - сомнительная идея.
+                </p>
+                <button class='close-modal' data-modal="#modal1" href="#">резонно</button>
+            </div>	
         </div>
-	</form>
+    </form>
 
     <p class="transparent">Powered by Me</p>
-    
-    <div data-remodal-id="modal2" role="dialog" aria-labelledby="modal2Title" aria-describedby="modal2Desc">
-        <div>
-            <h2 id="modal2Title">Регистрация?</h2>
-            <p id="modal2Desc">
-            Регистрироваться на лендинге - сомнительная идея.
-            </p>
-        </div>
-        <br>
-        <button data-remodal-action="confirm" class="remodal-confirm">Резонно</button>
-    </div>
 
-    <script>
-        $(document).on('opening', '.remodal', function () {
-          console.log('opening');
-        });
-    
-        $(document).on('opened', '.remodal', function () {
-          console.log('opened');
-        });
-    
-        $(document).on('closing', '.remodal', function (e) {
-          console.log('closing' + (e.reason ? ', reason: ' + e.reason : ''));
-        });
-    
-        $(document).on('closed', '.remodal', function (e) {
-          console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
-        });
-    
-        $(document).on('confirmation', '.remodal', function () {
-          console.log('confirmation');
-        });
-    
-        $(document).on('cancellation', '.remodal', function () {
-          console.log('cancellation');
-        });
-    
-        $('[data-remodal-id=modal2]').remodal({
-          modifier: 'with-red-theme'
-        });
-    </script>
 
+
+
+    <script src="js/modal.js"></script>
     <script src="https://use.fontawesome.com/50ae9b349d.js"></script>
 </body>
 </html>

@@ -187,7 +187,7 @@ h3 {
   text-align: center;
   line-height: 50px;
   text-transform: uppercase;
-  color: #FFF;
+  color: rgba(255, 255, 255, 0.897);
   mix-blend-mode: multiply;
   margin: 100px 0 20px 0;
   text-shadow: 0 0 8px rgba(0,0,0,5), 0 2px 4px rgb(0, 0, 0);
@@ -398,16 +398,10 @@ h3 {
   box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
 }		
 
-#signup div {
-  text-align: center;
-}
-
-#signup a{
-  text-align: center;
-  text-decoration: none;
+#signup button{
   margin: 20px 0 0 0;
   padding: 15px 8px;			
-  width: 50%;
+  width: 100%;
   cursor: pointer;
   border: 1px solid #fb525f;
   overflow: visible;
@@ -438,12 +432,12 @@ h3 {
         0 1px 0 rgba(255, 255, 255, .5) inset;			  						  
 }
 
-#signup a:hover{
+#signup button:hover{
     background-color: #ff2a3c;
         border-color: #ff2a3c;
 }
 
-#signup a:active{
+#signup button:active{
   position: relative;
   top: 3px;
   text-shadow: none;
@@ -463,3 +457,85 @@ h3 {
 #about a{
     color: #777;
 }		
+
+/* Modal Window */
+
+.btn {
+  padding: 20px 50px;
+  display: inline-block;
+  background: #EF233C;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.35s ease-in-out;
+  font-weight: 700;
+}
+.btn:hover {
+  background: #dc1029;
+}
+
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*padding: 40px;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal {
+  background: white;
+  text-align: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay .modal.open {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay .modal.open .content {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay .modal .content {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay .modal .title {
+  margin-top: 0;
+}
+
+.title {
+  color: #2a292f;
+  text-align: center;
+  margin: 60px 0 50px 0;
+}
+
+.content p {
+  margin: 25px 0 0 0;
+  color: #2a292f;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+  text-shadow: 0px 1px 3px #000000;
+}
