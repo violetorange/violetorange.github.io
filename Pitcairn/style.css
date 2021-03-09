@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+body {
+    overflow-x: hidden;
+    background-image: url(img/background.png);
+    overflow-y: hidden;
+}
+
+::selection {
+    background-color: #80b7b3;
+}
+
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow-x: hidden;
+}
+
+.midIslandBox {
+    position: absolute;
+    left: 50%;
+}
+
+.delPadding {
+    padding-right: 0 !important;
+}
+
+.doubleImg {
+    float: right;
+    max-width: 100%;
+}
+
+.islandsBox {
+    width: calc(230px + 66 * (100vw / 1880)) !important;
+    height: 176px;
+    background-color: #80b7b3;
+    text-align: center;
+    font-size: calc(60px + 31 * (100vw / 1880)) !important;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    left: -50%;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.climateImg {
+    width: calc(440px + 400 * (100vw / 1880));
+    height: auto;
+    box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+    margin-bottom: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+.wideImg {
+    margin-top: 100px;
+    margin-bottom: 135px;
+    width: 100%;
+}
+
+.bottomImg {
+    width: 100%;
+}
+
+.merch {
+    padding: 5%;
+    margin: 0 auto;
+    margin-top: -35%;
+    position: relative;
+    z-index: 1;
+    width: calc(390px + 280 * (100vw / 1880));
+    height: 100%;
+    background-color: rgba(39, 61, 70, 0.9);
+    text-align: center;
+}
+
+.merch p {
+    color: #d8dcdd;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30pt;
+}
+
+/* Gallery block */
+
+.galleryLink {
+    width: calc(70% + 30 * (100vw / 1880));
+    max-height: 100%;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
+a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .7s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Gallery block end */
+
+.travelOne {
+    text-align: left !important;
+    padding-left: 200px;
+}
+
+.travelTwo {
+    text-align: center !important;
+    margin-top: calc(80px + 110 * (100vw / 1880));
+}
+
+.afterImg p {
+    text-align: left;
+    font-family: 'Playfair Display', serif !important;
+    margin-top: 60px;
+}
+
+.quoteText {
+    margin-top: 45px;
+}
+
+.markImg {
+    box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+    margin-left: 20%;
+    width: calc(300px + 130 * (100vw / 1880));
+}
+
+.whiteBlock {
+    background-color: white;
+    width: calc(500px + 550 * (100vw / 1880));
+    height: auto;
+    box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: -4%;
+    position: relative;
+    z-index: 2;
+}
+
+.contentWhiteBlock {
+    max-width: 700px;
+}
+
+.whiteBlock p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: black;
+    max-width: 700px;
+}
+
+.wbButtonBlock {
+    margin-bottom: 100px;
+    text-align: center;
+    max-width: 1050px;
+    width: calc(500px + 550 * (100vw / 1880));
+    top: -7%;
+    position: relative;
+    z-index: 3;
+}
+
+.wbButtonBlock button {
+    margin-top: 0 !important;
+}
+
+.signature h3 {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.signName {
+    color: #52646b !important;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    font-size: calc(140px + 40 * (100vw / 1880)) !important;
+    color: #e9ebec !important;
+    margin-top: 105px !important;
+    margin-bottom: 40px !important;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
+    font-size: calc(15px + 17 * (100vw / 1880)) !important;
+    color: #687378;
+    margin-bottom: 40px !important;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif !important;
+    color: #273d46 !important;
+    font-size: calc(19px + 29 * (100vw / 1880)) !important;
+    margin-top: 34px !important;
+    margin-bottom: 60px !important;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif !important;
+    text-transform: uppercase !important;
+    font-size: calc(12px + 7 * (100vw / 1880)) !important;
+    color: #7d8b90 !important;
+    letter-spacing: 3pt;
+}
+
+button {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: calc(10px + 6 * (100vw / 1880)) !important;
+    color: white;
+    margin-top: 20px !important;
+    width: calc(100px + 100 * (100vw / 1880)) !important;
+    height: calc(22px + 23 * (100vw / 1880)) !important;
+    background-color: #80b7b3;
+    border: none;
+    border-radius: 30px !important;
+    box-shadow: 0px 1px 4px 2px rgba(34, 60, 80, 0.3);
+    outline: none !important;
+}
+
+button:hover {
+    background-color: #64a5a1;
+    
+}
+
+button:active {
+    box-shadow:0px 0px 1px #bababa, inset 0px 0px 6px #000000;
+}
+
+@media (max-width: 1600px) {
+    p {
+        font-size: calc(15px + (17 + 17 * 0.7) * ((100vw - 1024px) / 1880)) !important;
+        margin-bottom: 20px !important;
+    }
+
+    h1 {
+        font-size: calc(140px + 40 * (100vw / 1880)) !important;
+        font-size: calc(140px + (40 + 40 * 0.7) * ((100vw - 1024px) / 1880)) !important;
+    }
+
+    h2 {
+        font-size: calc(19px + (29 + 29 * 0.7) * ((100vw - 1024px) / 1880)) !important;
+        margin-top: 10px !important;
+        margin-bottom: 20px !important;
+    }
+
+    h3 {
+        font-size: calc(12px + (7 + 7 * 0.7) * ((100vw - 1024px) / 1880)) !important;
+    }
+
+    .islandsBox {
+        font-size: calc(60px + (31 + 31 * 0.7) * ((100vw - 1024px) / 1880)) !important;
+        width: calc(230px + (66 + 66 * 0.7) * ((100vw - 1024px) / 1880)) !important;
+        padding-top: 30px;
+    }
+
+    .climateImg {
+        width: calc(440px + (400 + 400 * 0.7) * ((100vw - 1024px) / 1880));
+        margin-top: 30px;
+    }
+
+    .travelOne {
+        padding-left: 100px;
+    }
+
+    .travelTwo {
+        margin-top: calc(80px + (110 + 110 * 0.7) * ((100vw - 1024px) / 1880));
+    }
+
+    .afterImg p {
+        margin-top: 30px;
+    }
+
+    .markImg {
+        width: calc(300px + (130 + 130 * 0.7) * ((100vw - 1024px) / 1880));
+    }
+
+    .whiteBlock {
+        width: calc(500px + (550 + 550 * 0.7) * ((100vw - 1024px) / 1880));
+    }
+
+    .wbButtonBlock {
+        width: calc(500px + (550 + 550 * 0.7) * ((100vw - 1024px) / 1880));
+    }
+
+    .merch {
+        width: calc(390px + (280 + 280 * 0.7) * ((100vw - 1024px) / 1880));
+    }
+
+    .galleryLink {
+        width: calc(70% + (30 + 30 * 0.7) * ((100vw - 1024px) / 1880));
+    }
+
+    button {
+        width: calc(100px + (100 + 100 * 0.7) * ((100vw - 1024px) / 1880)) !important;
+        height: calc(22px + (23 + 23 * 0.7) * ((100vw - 1024px) / 1880)) !important;
+        font-size: calc(10px + (6 + 6 * 0.7) * ((100vw - 1024px) / 1880)) !important;
+    }
+}
