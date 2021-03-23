@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/calcicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container" id="app" v-cloak>
+        <div class="preloader">
+            <div class="leftPreloader" :class="{preloaderToTheLeft: preloaderIsReady}">
+                <img class="vueLeft" src="img/vueLeft.png" alt="vueLeft">
+            </div>
+            <div class="rightPreloader" :class="{preloaderToTheRight: preloaderIsReady}">
+                <img class="vueRight"  src="img/vueRight.png" alt="vueRight">
+            </div>
+        </div>
+        <div class="darkScreen" :class="{darken: isPressed == true, lighten: isPressed == false}"></div>
+        <div class="projectDescription">
+            <div class="projectDescription__item" :class="{animFirst: isPressed == true, animDisplayOffFirst: isPressed == false}">
+                <div class="itemImg"><img src="img/vue.png" alt="vue"></div>
+                <p>Приложение написано на Vue.js</p>
+            </div>
+            <div class="projectDescription__item" :class="{animSecond: isPressed == true, animDisplayOffSecond: isPressed == false}">
+                <div class="itemImg"><img src="img/designer.png" alt="designer"></div>
+                <p>UI-дизайн калькулятора:<br><a href="https://dribbble.com/geez" target="_blank">Gijs van de Nieuwegiessen</a></p>
+            </div>
+            <div class="projectDescription__item" :class="{animLast: isPressed == true, animDisplayOffLast: isPressed == false}">
+                <div class="itemImg"><img src="img/HeadHunter.png" alt="hh"></div>
+                <p><a href="https://lipetsk.hh.ru/resume/4ebeacf7ff07c316ed0039ed1f3453644c6737" target="_blank">Моё резюме на HH</a></p>
+            </div>
+        </div>
+        <div class="centerCalc">
+            <div class="calc" :class="{toTheLeft: isPressed == true, toTheRight: isPressed == false}">
+                <div class="top__part">
+                    <img class="logo" src="img/logo.png" alt="logo">
+                    <input disabled type="text" class="mainValue v-enter" placeholder="0" v-model="mainValue">
+                </div>
+                <div class="main__part">
+                    <button class="top__button" @click="delSymbol"><i class="fas fa-backspace"></i></button>
+                    <button class="top__button emptyButton">0</button>
+                    <button class="top__button" @click="reset()">C</button>
+                    <button class="rightSideBtn" @click="addSymbol('/')">/</button>
+                    <button @click="addSymbol(7)">7</button>
+                    <button @click="addSymbol(8)">8</button>
+                    <button @click="addSymbol(9)">9</button>
+                    <button class="rightSideBtn" @click="addSymbol('*')">*</button>
+                    <button @click="addSymbol(4)">4</button>
+                    <button @click="addSymbol(5)">5</button>
+                    <button @click="addSymbol(6)">6</button>
+                    <button class="rightSideBtn" @click="addSymbol('-')">-</button>
+                    <button @click="addSymbol(1)">1</button>
+                    <button @click="addSymbol(2)">2</button>
+                    <button @click="addSymbol(3)">3</button>
+                    <button class="rightSideBtn" @click="addSymbol('+')">+</button>
+                    <button @click="startAnim()"><i class="far fa-gem" style="color: #F14337;"></i></button>
+                    <button @click="addSymbol(0)">0</button>
+                    <button @click="addSymbol('.')">,</button>
+                    <button class="rightSideBtn" @click="equally()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>

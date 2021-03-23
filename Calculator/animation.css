@@ -1,0 +1,180 @@
+.container {
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1000px;
+    perspective-origin: 50% 50%
+}
+
+.toTheLeft {
+    animation: toTheLeft 3s;
+    animation-fill-mode: forwards;
+}
+
+.animFirst {
+    animation: displayOn 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.animSecond {
+    animation: displayOn 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.animLast {
+    animation: displayOn 1.5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.toTheRight {
+    transform: translateX(-25vw);
+    animation: toTheRight 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+.animDisplayOffFirst {
+    opacity: 1;
+    visibility: visible;
+    padding-left: 0;
+    animation: displayOff 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.animDisplayOffSecond {
+    opacity: 1;
+    visibility: visible;
+    padding-left: 0;
+    animation: displayOff 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.animDisplayOffLast {
+    opacity: 1;
+    visibility: visible;
+    padding-left: 0;
+    animation: displayOff 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.darkScreen {
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.darken {
+    animation: darken 2s;
+    animation-fill-mode: forwards;
+}
+
+.lighten {
+    animation: lighten 2s;
+    animation-fill-mode: forwards;
+}
+
+.preloaderToTheLeft {
+    animation: preloaderToTheLeft 2s;
+    animation-fill-mode: forwards;
+}
+
+.preloaderToTheRight {
+    animation: preloaderToTheRight 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes preloaderToTheLeft {
+    0%{
+        transform: translateX(0);
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(-100%);
+        visibility: hidden;
+    }
+}
+
+@keyframes preloaderToTheRight {
+    0%{
+        transform: translateX(0);
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(100%);
+        visibility: hidden;
+    }
+}
+
+@keyframes toTheLeft {
+    0% {
+        transform: translateX(0vw);
+    }
+    100% {
+        transform: translateX(-25vw);
+    }
+}
+
+@keyframes toTheRight {
+    0% {
+        transform: translateX(-25vw);
+    }
+    100% {
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes displayOn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(5vw);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+@keyframes displayOff {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(5vw);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes darken {
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes lighten {
+    0%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
