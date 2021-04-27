@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <title>Wallpaper Calc</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="form-controls">
+                    <input type="text" id="room__length" required>
+                    <label for="room__length">Длина комнаты (м)</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-controls">
+                    <input type="text" id="room__width" required>
+                    <label for="room__width">Ширина комнаты (м)</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-controls">
+                    <input type="text" id="room__height" required>
+                    <label for="room__height">Высота комнаты (м)</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-controls rolls">
+                    <input type="text" id="roll__width" required>
+                    <label for="roll__width">Ширина рулона (м)</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-controls rolls">
+                    <input type="text" id="roll__length" required>
+                    <label for="roll__length">Длина рулона (м)</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <button class="btn" type="button">Посчитать</button>
+            </div>
+            <div class="col-10">
+                <div class="results">
+                    <p class="countText align-middle">Необходимо рулонов:</p><p class="count__rolls align-middle">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
